@@ -46,7 +46,7 @@ public class Movie {
     }
 
     public String toString() {
-        return "???";
+        return "Movie #" + rank + " is " + title + " (released on: " + releaseDate + ") earning $" + revenue;
     }
     String newest() {
         return null;
@@ -54,6 +54,5 @@ public class Movie {
     int averageRevenue() {
         return 0;
     }
-
 
 }

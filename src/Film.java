@@ -17,7 +17,7 @@ public class Film extends Movie {
     }
 
     public String toString() {
-        return "????";
+        return "Film #" + getRank() + " is " + getTitle() + " (released on: " + getReleaseDate() + ") earning $" + getRevenue() + " and peaking at #" + peak;
     }
     String newest() {
         return null;
