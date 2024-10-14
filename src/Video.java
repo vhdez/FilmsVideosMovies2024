@@ -47,7 +47,8 @@ public class Video extends Movie {
     }
 
     public String toString() {
-        return "Video #" + getRank() + " is " + getTitle() + " (released on: " + getReleaseDate() + ") earning $" + getRevenue() + " by selling " + allSales + " copies (vhs:" + vhsSales + ", dvd:" + dvdSales + ", bluray:" + bluraySales + ")";
+        String movieString = super.toString();
+        return "Video " + movieString + " by selling " + allSales + " copies (vhs:" + vhsSales + ", dvd:" + dvdSales + ", bluray:" + bluraySales + ")";
     }
     String mostVHS() {
         return null;

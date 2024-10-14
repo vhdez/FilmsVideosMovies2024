@@ -1,11 +1,18 @@
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+
+        Film.readAllData();
+        System.out.println(Film.allFilms);
+
+        /*
         // 1	1	Avatar	$2,923,706,026	2009	[# 1][# 2]
         Date date1 = new Date(109,0,1);
         Film film1 = new Film(1,"Avatar", 2923706826L, date1, 1);
+        Film.newest();
         System.out.println(film1);
         // 2	1	Avengers: Endgame	$2,797,501,328	2019	[# 3][# 4]
         Date date2 = new Date(119,0,1);
@@ -46,5 +53,9 @@ public class Main {
         for (Movie movie: allMovies) {
             System.out.println(movie);
         }
+
+        Movie.newest();
+
+         */
     }
 }
