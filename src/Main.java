@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-
         Film.readAllData();
-        System.out.println(Film.allFilms);
+        Film.describeAllFilms();
+        System.out.println("Newest film on list is: "+ Film.newest());
 
         /*
         // 1	1	Avatar	$2,923,706,026	2009	[# 1][# 2]

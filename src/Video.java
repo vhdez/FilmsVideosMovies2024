@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Video extends Movie {
@@ -6,7 +7,7 @@ public class Video extends Movie {
     private int dvdSales;
     private int bluraySales;
 
-    public Video(int rank, String title, long revenue, Date releaseDate, int allSales, int vhsSales, int dvdSales, int bluraySales) {
+    public Video(int rank, String title, long revenue, LocalDate releaseDate, int allSales, int vhsSales, int dvdSales, int bluraySales) {
         super(rank, title, revenue, releaseDate);
         this.allSales = allSales;
         this.vhsSales = vhsSales;

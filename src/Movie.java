@@ -1,12 +1,13 @@
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Movie {
     private int rank;
     private String title;
     private long revenue;
-    private Date releaseDate;
+    private LocalDate releaseDate;
 
-    public Movie(int rank, String title, long revenue, Date releaseDate) {
+    public Movie(int rank, String title, long revenue, LocalDate releaseDate) {
         this.rank = rank;
         this.title = title;
         this.revenue = revenue;
@@ -37,11 +38,11 @@ public class Movie {
         this.revenue = revenue;
     }
 
-    public Date getReleaseDate() {
+    public LocalDate getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(Date releaseDate) {
+    public void setReleaseDate(LocalDate releaseDate) {
         this.releaseDate = releaseDate;
     }
 
