@@ -43,16 +43,24 @@ public class Film extends Movie {
     static void readAllData() throws Exception {
         File dataFile = new File("FilmsDataFromWikipedia");
         Scanner textScanner = new Scanner(dataFile);
+        // Scan the whole data file LINE-by-LINE \n (1 row at at time)
         textScanner.useDelimiter("\n");
+        // Repeat scanning while there is another line (another row)
         while (textScanner.hasNext()) {
+            // Extract individual line/row for scanning
             String fullRow = textScanner.nextLine();
             Scanner rowScanner = new Scanner(fullRow);
+            // Each row has data chunks separated by tabs \t
             rowScanner.useDelimiter("\t");
 
+            // Now turn each next chunk of data into your object's values
+
             //1	1	Avatar	$2,923,706,026	2009	[# 1][# 2]
+            // Data chunk 1: "1"
             int data1 = rowScanner.nextInt();
             System.out.println("data1: " + data1);
 
+            // Data chunk 2: "1"
             String data2String = rowScanner.next();
             data2String = data2String.replace("R","");
             data2String = data2String.replace("K","");
@@ -61,21 +69,24 @@ public class Film extends Movie {
             int data2 = Integer.parseInt(data2String);
             System.out.println("data2: " + data2);
 
+            // Data chunk 3: "Avatar"
             String data3 = rowScanner.next();
             System.out.println("data3: " + data3);
 
-            //  $2,923,706,026
+            // Data chunk 4: "$2,923,706,026"
             String data4String = rowScanner.next();
             data4String = data4String.substring(data4String.indexOf("$")+1, data4String.length());
             data4String = data4String.replaceAll(",", "");
             long data4 = Long.parseLong(data4String);
             System.out.println("data4: " + data4);
 
+            // Data chunk 5: "2009"
             String data5 = rowScanner.next();
             int year = Integer.parseInt(data5);
             LocalDate newDate = LocalDate.of(year, 1,1);
             System.out.println("data5: " + newDate);
 
+            // Data chunk 6: "[# 1][# 2]"
             String data6 = rowScanner.next();
             System.out.println("IGNORE data6: " + data6);
 
